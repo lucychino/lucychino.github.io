@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Productos - Santa Clara</title>
+<link rel="stylesheet" href="../CSS/StylesHelados01.css">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav-bar">
+    <div class="logo-nav">
+        <img src="../ImagenesHelados/LogoSolo.png">
+    </div>
+
+    <ul class="contenedor-menu" id="menu">
+        <li><a href="Helados01.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Novedades.html">Novedades</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="icono" onclick="toggleMenu()">☰</div>
+</nav>
+
+    <section class="animado">    
+<section class="hero">
+    <a href="../index.html">
+    <img src="../ImagenesHelados/LogoG.png" class="logo"></a>
+</section>
+<!-- HEADER -->
+<section class="hero animado">
+    <h1>Nuestros Productos</h1>
+    <p>Explora todos nuestros sabores y opciones</p>
+</section>
+
+<!-- PRODUCTOS -->
+<section class="productos animado">
+
+<div class="contenedor-servicios">
+
+<div class="card">
+<img src="../ImagenesHelados/HSC01.jpg">
+<p>Helados Premium</p>
+<button onclick="openModal(`
+<h2>Helados</h2>
+<ul>
+<li>Vainilla clásica</li>
+<li>Chocolate intenso</li>
+<li>Fresa cremosa</li>
+<li>Cookies & Cream</li>
+<li>Taro</li>
+<li>Caramelo salado</li>
+</ul>
+<p>Textura cremosa y sabores únicos.</p>
+`)">Ver más</button>
+</div>
+
+<div class="card">
+<img src="../ImagenesHelados/paletasSC01.jpg">
+<p>Paletas</p>
+<button onclick="openModal(`
+<h2>Paletas</h2>
+<ul>
+<li>Mango</li>
+<li>Fresa</li>
+<li>Limón</li>
+<li>Coco</li>
+</ul>
+<p>Perfectas para refrescarte.</p>
+`)">Ver más</button>
+</div>
+
+<div class="card">
+<img src="../ImagenesHelados/leche01.jpg">
+<p>Bebidas</p>
+<button onclick="openModal(`
+<h2>Bebidas</h2>
+<ul>
+<li>Malteadas</li>
+<li>Leche chocolate</li>
+<li>Leche fresa</li>
+</ul>
+<p>Complemento ideal para tu antojo.</p>
+`)">Ver más</button>
+</div>
+
+</div>
+</section>
+<section>
+    
+    </section>
+<section class="contenedor-video">
+    <video autoplay loop muted controls>
+        <source src="../videosH/Vid02.mp4" type="video/mp4">
+    </video>
+</section>
+<!-- EXTRA SECCIÓN BONITA -->
+<section class="novedades animado">
+<h2>Recomendaciones</h2>
+
+<div class="contenedor-novedades">
+
+<div class="card-novedad">
+<img src="../ImagenesHelados/OreoH.jpg">
+<div class="info">
+<h3>Especial Oreo</h3>
+<p>Uno de los favoritos</p>
+</div>
+</div>
+
+<div class="card-novedad">
+<img src="../ImagenesHelados/TChoco.jpg">
+<div class="info">
+<h3>Triple Chocolate</h3>
+<p>Para los amantes del cacao</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- MODAL -->
+<div id="miModal" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="closeModal()">&times;</span>
+    <p id="modalTexto"></p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div>
+        <h4>Contacto</h4>
+        <p>@Santaclaramx</p>
+    </div>
+
+    <div>
+        <h4>Redes</h4>
+        <a href="https://www.facebook.com/SantaClaraMex/?locale=es_LA" target="_blank">
+           <img src="../ImagenesHelados/facebook01.png"></a>
+        <a href="https://www.instagram.com/somoscocacola?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+            <img src="../ImagenesHelados/ig.jpg"></a>
+        <a href="https://x.com/CocaCola" target="_blank">
+            <img src="../ImagenesHelados/X.png"></a>
+    </div>
+
+    <div>
+        <h4>Ubicación</h4>
+        <p>México</p>
+    </div>
+
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+
+function openModal(texto){
+    document.getElementById("miModal").style.display = "block";
+    document.getElementById("modalTexto").innerHTML = texto;
+}
+
+function closeModal(){
+    document.getElementById("miModal").style.display = "none";
+}
+
+window.addEventListener("scroll", function(){
+    let elementos = document.querySelectorAll(".animado");
+    elementos.forEach(function(el){
+        let altura = window.innerHeight;
+        let distancia = el.getBoundingClientRect().top;
+
+        if(distancia < altura - 100){
+            el.classList.add("mostrar");
+        }
+    });
+});
+</script>
+    </section>
+    </body>
+</html>

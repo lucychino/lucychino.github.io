@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Helados Santa Clara</title>
+    <link rel="stylesheet" href="../CSS/StylesHelados01.css">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav-bar">
+    <div class="logo-nav">
+        <img src="../ImagenesHelados/LogoSolo.png">
+    </div>
+
+    <ul class="contenedor-menu" id="menu">
+        <li><a href="Helados01.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Novedades.html">Novedades</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="icono" onclick="toggleMenu()">☰</div>
+</nav>
+
+<!-- HERO -->
+<section class="animado">    
+<section class="hero">
+    <a href="../index.html">
+    <img src="../ImagenesHelados/LogoG.png" class="logo"></a>
+</section>
+
+<!-- VIDEO -->
+<section class="contenedor-video">
+    <video autoplay loop muted controls>
+        <source src="../videosH/VHelado.mp4" type="video/mp4">
+    </video>
+</section>
+    <section class="intro">
+    <h2>El sabor que enamora</h2>
+    <p>
+        Descubre la cremosidad y tradición de nuestros helados, elaborados con ingredientes de la más alta calidad.
+    </p>
+</section>
+<section>
+<!-- SLIDESHOW -->
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <img src="../ImagenesHelados/Pub01.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="../ImagenesHelados/SC02Pub.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="../ImagenesHelados/SC01Pub.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+    
+    <div class="mySlides fade">
+    <img src="../ImagenesHelados/fondo02.png" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+</section>
+<!-- PRODUCTOS -->
+<!-- PRODUCTOS CON MODAL -->
+<section class="productos animado">
+    <h2>Nuestros Productos</h2>
+
+    <div class="contenedor-servicios">
+
+        <div class="card">
+            <img src="../ImagenesHelados/HSC01.jpg">
+            <p>Helados</p>
+            <button onclick="openModal(`
+                             <h2>Helados</h2>
+                             <ul>
+                                <li>Vainilla clásica</li>
+                                <li>Chocolate intenso</li>
+                                <li>Fresa cremosa</li>
+                                <li>Cookies & Cream</li>
+                                <li>Taro</li>
+                                <li>Caramelo salado</li>
+                             </ul>
+                             <p> Disfruta nuestros sabores de temporada y ediciones especiales.</p>
+`)">Ver más</button>
+        </div>
+
+        <div class="card">
+            <img src="../ImagenesHelados/paletasSC01.jpg">
+            <p>Paletas</p>
+            <button onclick="openModal(`
+<h2>Paletas</h2>
+<ul>
+<li>Mango natural</li>
+<li>Fresa</li>
+<li>Limón</li>
+<li>Coco</li>
+<li>Chocolate</li>
+<li>Leche condensada</li>
+</ul>
+<p> Refrescantes, cremosas y perfectas para cualquier momento.</p>
+`)">Ver más</button>
+        </div>
+
+        <div class="card">
+            <img src="../ImagenesHelados/leche01.jpg">
+            <p>Leches</p>
+            <button onclick="openModal(`
+<h2>Leches</h2>
+<ul>
+<li>Leche entera</li>
+<li>Deslactosada</li>
+<li>Chocolate</li>
+<li>Fresa</li>
+<li>Light</li>
+</ul>
+<p> Calidad premium para acompañar cada momento.</p>
+`)">Ver más</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- MODAL -->
+<div id="miModal" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="closeModal()">&times;</span>
+    <p id="modalTexto"></p>
+  </div>
+</div>
+
+<!-- NUEVOS SABORES -->
+<section class="novedades">
+    <h2>Novedades Santa Clara</h2>
+
+    <div class="contenedor-novedades">
+
+        <div class="card-novedad">
+            <img src="../ImagenesHelados/HTaro.jpg">
+            <div class="info">
+                <h3>Helado de Taro y Yogurt</h3>
+                <p>Disfruta su cremosidad única.</p>
+                <a href="#">Probar ahora →</a>
+            </div>
+        </div>
+
+        <div class="card-novedad">
+            <img src="../ImagenesHelados/OreoH.jpg">
+            <div class="info">
+                <h3>Chopeo con sabor a Oreo</h3>
+                <p>Combinación cremosa irresistible.</p>
+                <a href="#">Descubre →</a>
+            </div>
+        </div>
+
+        <div class="card-novedad">
+            <img src="../ImagenesHelados/TChoco.jpg">
+            <div class="info">
+                <h3>Triple Chocolate</h3>
+                <p>Para amantes del chocolate.</p>
+                <a href="#">Descubre →</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+    
+    <!-- MARCAS DE PREFERENCIA -->
+<section class="productos animado">
+    <h2>Consíguelas en tu tienda de preferencia</h2>
+
+    <div class="contenedor-servicios">
+
+        <div class="card">
+            <a href="https://www.rappi.com.mx/?utm_source=google&pid=google&utm_medium=cpc&af_channel=cpc&utm_
+                     campaign=CX_MX_PR_SE_GO_SEB_DSK_ALL_RAP_ALL_NA_MX001_EXA&c=CX_MX_PR_SE_GO_SEB_DSK_ALL_RAP
+                     _ALL_NA_MX001_EXA&utm_id=18543495016&af_c_id=18543495016&utm_term=rappi&af_keywords=rappi&u
+                     tm_content=e&af_ad=e&af_force_transparent=true&gad_source=1&gad_campaignid=18543495016&gbra
+                     id=0AAAAADSEHRGNf7d0BRMefMp0lMdSEUD3A&gclid=CjwKCAjwnN3OBhA8EiwAfpTYelGUWG9euYlu_RjHQuxSkzC
+                     CJPRAFdF-p5MspTQyWznF8WFkGTY9KRoCzvgQAvD_BwE" target="_blank">
+                <img src="../ImagenesHelados/rappi.jpg"></a>
+        </div>
+
+
+        <div class="card">
+            <a href="https://www.amazon.com.mx/?&tag=hydramzkw0mx-20&ref=pd_sl_3
+                     wp4idwd5k_e&adgrpid=150779885181&hvpone=&hvptwo=&hvadid=675
+                     154971484&hvpos=&hvnetw=g&hvrand=966476349008702300&hvqmt=e&
+                     hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9073959&hvtargid=kwd-228
+                     2899823&hydadcr=13960_13404197&gad_source=1" target="_blank">
+                <img src="../ImagenesHelados/amazon.png"></a>
+        </div>
+    
+
+        <div class="card">
+            <a href="https://www.walmart.com.mx/" target="_blank">
+                <img src="../ImagenesHelados/Walm.png"></a>
+        </div>
+    </div>
+    </section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div>
+        <h4>Contacto</h4>
+        <p>@Santaclaramx</p>
+    </div>
+
+    <div>
+        <h4>Redes</h4>
+        <a href="https://www.facebook.com/SantaClaraMex/?locale=es_LA" target="_blank">
+           <img src="../ImagenesHelados/facebook01.png"></a>
+        <a href="https://www.instagram.com/somoscocacola?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+            <img src="../ImagenesHelados/ig.jpg"></a>
+        <a href="https://x.com/CocaCola" target="_blank">
+            <img src="../ImagenesHelados/X.png"></a>
+    </div>
+
+    <div>
+        <h4>Ubicación</h4>
+        <p>México</p>
+    </div>
+
+</footer>
+
+<!-- SCRIPT SLIDESHOW -->
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) { showSlides(slideIndex += n); }
+
+function currentSlide(n) { showSlides(slideIndex = n); }
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<!-- MENU HAMBURGUESA -->
+<script>
+function toggleMenu(){
+    let menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+}
+</script>
+
+<!-- MODAL es el que abre las ventanas de los productoss -->
+<script>
+function openModal(texto){
+    document.getElementById("miModal").style.display = "block";
+    document.getElementById("modalTexto").innerHTML = texto;
+}
+
+function closeModal(){
+    document.getElementById("miModal").style.display = "none";
+}
+</script>
+
+<!-- SCROLL ANIMATION -->
+<script>
+window.addEventListener("scroll", function(){
+    let elementos = document.querySelectorAll(".animado");
+
+    elementos.forEach(function(el){
+        let altura = window.innerHeight;
+        let distancia = el.getBoundingClientRect().top;
+
+        if(distancia < altura - 100){
+            el.classList.add("mostrar");
+        }
+    });
+});
+</script>
+    </section>
+</body>
+</html>

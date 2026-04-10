@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Novedades - Santa Clara</title>
+<link rel="stylesheet" href="../CSS/StylesHelados01.css">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav-bar">
+    <div class="logo-nav">
+        <img src="../ImagenesHelados/LogoSolo.png">
+    </div>
+
+    <ul class="contenedor-menu" id="menu">
+        <li><a href="Helados01.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Novedades.html">Novedades</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="icono" onclick="toggleMenu()">☰</div>
+</nav>
+
+<!-- HERO -->
+    <section class="animado">    
+<section class="hero">
+    <a href="../index.html">
+    <img src="../ImagenesHelados/LogoG.png" class="logo"></a>
+</section>
+<section class="hero animado">
+    <h1>Novedades</h1>
+    <p>Descubre lo más nuevo de Santa Clara</p>
+</section>
+
+<!-- TARJETAS GRANDES -->
+<section class="novedades animado">
+
+<div class="contenedor-novedades">
+
+<div class="card-novedad">
+<img src="../ImagenesHelados/HTaro.jpg">
+<div class="info">
+<h3>Taro & Yogurt</h3>
+<p>Cremoso, diferente y delicioso.</p>
+<a href="#">Descubrir →</a>
+</div>
+</div>
+
+<div class="card-novedad">
+<img src="../ImagenesHelados/OreoH.jpg">
+<div class="info">
+<h3>Chopeo de Oreo</h3>
+<p>El favorito de todos.</p>
+<a href="#">Probar →</a>
+</div>
+</div>
+
+<div class="card-novedad">
+<img src="../ImagenesHelados/TChoco.jpg">
+<div class="info">
+<h3>Triple Chocolate</h3>
+<p>Intenso y delicioso.</p>
+<a href="#">Ver más →</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- SECCIÓN EXTRA -->
+<section class="productos animado">
+<h2>Productos tradicionales</h2>
+
+<div class="contenedor-servicios">
+
+<div class="card">
+<img src="../ImagenesHelados/HSC01.jpg">
+<p>Helados</p>
+</div>
+
+<div class="card">
+<img src="../ImagenesHelados/paletasSC01.jpg">
+<p>Paletas</p>
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div>
+        <h4>Contacto</h4>
+        <p>@Santaclaramx</p>
+    </div>
+
+    <div>
+        <h4>Redes</h4>
+        <a href="https://www.facebook.com/SantaClaraMex/?locale=es_LA" target="_blank">
+           <img src="../ImagenesHelados/facebook01.png"></a>
+        <a href="https://www.instagram.com/somoscocacola?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+            <img src="../ImagenesHelados/ig.jpg"></a>
+        <a href="https://x.com/CocaCola" target="_blank">
+            <img src="../ImagenesHelados/X.png"></a>
+    </div>
+
+    <div>
+        <h4>Ubicación</h4>
+        <p>México</p>
+    </div>
+
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+
+window.addEventListener("scroll", function(){
+    let elementos = document.querySelectorAll(".animado");
+    elementos.forEach(function(el){
+        let altura = window.innerHeight;
+        let distancia = el.getBoundingClientRect().top;
+
+        if(distancia < altura - 100){
+            el.classList.add("mostrar");
+        }
+    });
+});
+</script>
+    </section>
+</body>
+</html>

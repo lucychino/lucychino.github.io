@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Rubik", sans-serif;
+    background:#fdf6f0;
+    color:#320d01;
+}
+
+/* NAV */
+.nav-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#320d01;
+    padding:10px 40px;
+    position:relative;
+}
+
+.logo-nav img{
+    width:81px;
+    border-radius:5%;
+}
+
+/* MENÚ */
+.contenedor-menu{
+    display:flex;
+    list-style:none;
+}
+
+.contenedor-menu li{
+    margin:0 20px;
+}
+
+.contenedor-menu a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.contenedor-menu a:hover{
+    color:#f6bd60;
+    letter-spacing:2px;
+}
+
+/* MENU DE HAMBURGUESA */
+.icono{
+    display:none;
+    font-size:30px;
+    color:white;
+    cursor:pointer;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .contenedor-menu{
+        display:none;
+        flex-direction:column;
+        background:#320d01;
+        position:absolute;
+        top:70px;
+        right:0;
+        width:100%;
+        text-align:center;
+    }
+
+    .contenedor-menu li{
+        margin:20px 0;
+    }
+
+    .icono{
+        display:block;
+    }
+
+    .contenedor-servicios,
+    .contenedor-novedades{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .contenedor-video video{
+        width:90%;
+    }
+    .contenedor-menu.active{
+    display:flex;
+}
+}
+
+/* SCROLL ANIMATION */
+.animado{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 0.8s;
+}
+
+.mostrar{
+    opacity:1;
+    transform:translateY(0);
+}
+/* HERO */
+.hero{
+    text-align:center;
+    padding:40px;
+}
+
+.logo{
+    width:200px;
+    cursor:pointer;
+    transition:all 0.3s ease;
+    border-radius:20px;
+}
+
+.logo:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* VIDEO */
+.contenedor-video{
+    text-align:center;
+}
+
+.contenedor-video video{
+    width:70%;
+    border-radius:25px;
+    box-shadow:0px 15px 40px rgba(0,0,0,0.25);
+    transition:0.3s;
+}
+
+.contenedor-video video:hover{
+    transform:scale(1.02);
+}
+
+/* INTRO */
+.intro{
+    text-align:center;
+    margin-top:60px;
+    margin-bottom:20px;
+    padding:0 20px;
+}
+
+.intro h2{
+    font-size:40px;
+}
+
+.intro p{
+    margin-top:15px;
+    font-size:18px;
+    color:#555;
+}
+
+/* SLIDESHOW */
+.slideshow-container{
+    max-width:1000px;
+    margin:auto;
+    margin-top:90px;
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+}
+
+.mySlides{display:none;}
+
+.mySlides img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+}
+
+.prev, .next{
+    cursor:pointer;
+    position:absolute;
+    top:50%;
+    padding:16px;
+    color:white;
+}
+
+.next{right:0;}
+
+/* PRODUCTOS */
+.productos{
+    text-align:center;
+    margin-top:80px;
+}
+
+.contenedor-servicios{
+    display:flex;
+    justify-content:center;
+    margin-top:30px;
+}
+
+.card{
+    background:white;
+    margin:20px;
+    mask-border-mode: alpha;
+    padding:20px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.3s;
+    height:350px;
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0px 10px 20px rgba(0,0,0,0.2);
+}
+
+.card:hover img{
+    transform:scale(1.05);
+}
+
+/* BOTONES */
+button{
+    margin-top:10px;
+    padding:10px 20px;
+    border:none;
+    background:#f28482;
+    color:white;
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#f6bd60;
+}
+
+/* NOVEDADES */
+.novedades{
+    text-align:center;
+    margin-top:80px;
+}
+
+.contenedor-novedades{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:40px;
+}
+
+.card-novedad{
+    width:300px;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.card-novedad img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.card-novedad:hover{
+    transform:translateY(-10px);
+    box-shadow:0px 15px 30px rgba(0,0,0,0.2);
+}
+
+.card-novedad:hover img{
+    transform:scale(1.05);
+}
+
+.info{
+    padding:20px;
+    text-align:left;
+}
+
+/* FOOTER */
+.footer{
+    background:#320d01;
+    color:white;
+    display:flex;
+    justify-content:space-around;
+    padding:40px;
+    margin-top:50px;
+}
+
+.footer img{
+    width:30px;
+    margin:5px;
+}
+
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    z-index:10;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+}
+
+.modal-contenido{
+    background:white;
+    margin:15% auto;
+    padding:20px;
+    width:60%;
+    border-radius:20px;
+    text-align:center;
+}
+
+.modal-contenido h2{
+    margin-bottom:10px;
+    color:#320d01;
+}
+
+.modal-contenido ul{
+    list-style:none;
+    padding:0;
+}
+
+.modal-contenido li{
+    margin:6px 0;
+    font-size:16px;
+}
+
+.modal-contenido p{
+    margin-top:10px;
+    font-style:italic;
+    color:#555;
+}
+
+.cerrar{
+    float:right;
+    font-size:28px;
+}
+ 
+/* Contacto formulariooo */
+.formulario-container{
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+
+.formulario{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    width:300px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    box-shadow:0px 10px 20px rgba(0,0,0,0.1);
+}
+
+.formulario input,
+.formulario textarea{
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+.landing{
+    height:100vh;
+    background:url("../ImagenesHelados/fondo01.jpg") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay{
+    background:rgba(0,0,0,0.5);
+    padding:50px;
+    border-radius:20px;
+    text-align:center;
+    color:white;
+}
+
+.overlay h1{
+    font-size:60px;
+    margin-bottom:10px;
+}
+
+.overlay p{
+    font-size:20px;
+    margin-bottom:20px;
+}

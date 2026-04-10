@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Contacto - Santa Clara</title>
+<link rel="stylesheet" href="../CSS/StylesHelados01.css">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav-bar">
+    <div class="logo-nav">
+        <img src="../ImagenesHelados/LogoSolo.png">
+    </div>
+
+    <ul class="contenedor-menu" id="menu">
+        <li><a href="Helados01.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Novedades.html">Novedades</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="icono" onclick="toggleMenu()">☰</div>
+</nav>
+
+<!-- HERO -->
+    <section class="animado">    
+<section class="hero">
+    <a href="../index.html">
+    <img src="../ImagenesHelados/LogoG.png" class="logo"></a>
+</section>
+<section class="hero animado">
+    <h1>Contáctanos</h1>
+    <p>Queremos escucharte</p>
+</section>
+
+<!-- FORMULARIO -->
+<section class="animado">
+<div class="formulario-container">
+
+<form class="formulario">
+<input type="text" placeholder="Nombre" required>
+<input type="email" placeholder="Correo" required>
+<textarea placeholder="Mensaje" rows="5"></textarea>
+<button type="submit">Enviar</button>
+</form>
+
+</div>
+</section>
+
+<!-- EXTRA -->
+<section class="intro animado">
+<h2>Visítanos</h2>
+<p>Encuentra nuestras sucursales en todo México.</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div>
+        <h4>Contacto</h4>
+        <p>@Santaclaramx</p>
+    </div>
+
+    <div>
+        <h4>Redes</h4>
+        <a href="https://www.facebook.com/SantaClaraMex/?locale=es_LA" target="_blank">
+           <img src="../ImagenesHelados/facebook01.png"></a>
+        <a href="https://www.instagram.com/somoscocacola?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+            <img src="../ImagenesHelados/ig.jpg"></a>
+        <a href="https://x.com/CocaCola" target="_blank">
+            <img src="../ImagenesHelados/X.png"></a>
+    </div>
+
+    <div>
+        <h4>Ubicación</h4>
+        <p>México</p>
+    </div>
+
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+
+window.addEventListener("scroll", function(){
+    let elementos = document.querySelectorAll(".animado");
+    elementos.forEach(function(el){
+        let altura = window.innerHeight;
+        let distancia = el.getBoundingClientRect().top;
+
+        if(distancia < altura - 100){
+            el.classList.add("mostrar");
+        }
+    });
+});
+</script>
+    </section>
+</body>
+</html>
